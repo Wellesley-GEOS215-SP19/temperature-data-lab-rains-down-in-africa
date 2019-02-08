@@ -28,7 +28,7 @@ stationlon = 24.77;
 % point markers rather than a line connecting each data point.
 year = stationdata.Year
 temp = stationdata.Jan
-plot(year,temp,'r*')
+plot(year,temp,'o')
 
 
 % Calculate the monthly mean, minimum, maximum, and standard deviation
@@ -60,10 +60,14 @@ tempMax = max(tempData)
 %change from the automatic x or y axis limits.
     figure(1); clf
     
-months = stationdata(1, 4:15)
-year = stationdata.Year
+months = stationdata(1, 4:15);
+year = stationdata.Year;
 
-plot(year, months, 'b*')
+%err = tempStd
+errorbar(tempStd, err)
+title('Monthly Climatology With Standard Deviation')
+xlabel()
+ylabel()
 
 %% Fill missing values with the monthly climatological value
 % Find all values of NaN in tempData and replace them with the
@@ -75,12 +79,20 @@ for i = 1:12
     %array of data points with NaN values
     indnan = find(isnan(tempData(:,i)) == 1); %check to make sure you understand what is happening in this line
     %now fill the corresponding values with the climatological mean
-    % --> 
+   
+        if indnan == 1 
+            indnan = tempMean;
+        end
+    
 end
 
 %% Calculate the annual mean temperature for each year
-% --> 
 
+%annualmean = mean(stationdata(:, 4:15))
+
+for i = stationdata.Year
+    mean(tempData)
+end
 %% Calculate the temperature anomaly for each year, compared to the 1981-2000 mean
 % The anomaly is the difference from the mean over some baseline period. In
 % this case, we will pick the baseline period as 1981-2000 for consistency
@@ -89,7 +101,7 @@ end
 
 %Calculate the annual mean temperature over the period from 1981-2000
   %Use the find function to find rows contain data where stationdata.Year is between 1981 and 2000
-% -->
+[row,col] = find(1981)
   %Now calculate the mean over the full time period from 1981-2000
 % -->
 
