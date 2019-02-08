@@ -149,15 +149,15 @@ P60 = polyfit(year(w1960),anomaly(w1960)', 1)
 %different color.
 hold on;
 
-plot(year,(P(1)*year) + (P(2)), 'g')
+Pplot = plot(year,(0.0265*year) + (-52.7616), 'g')
 hold on;
 
-plot(year(w1960),(P60(1)*year(w1960)) + (P60(2)),'m')
+P60 = plot(year(w1960),(0.0252*year(w1960)) + (-2.4168),'p')
 hold on;
 
 
 %% Add a legend, axis labels, and a title to your temperature anomaly plot
-legend({}, 'Location','northeast')
+% legend({}, 'Location','northeast',')
 xlabel('Years')
 ylabel('Anomaly')
 title('Temperature Anomaly in South Africa from (1897-1991)')
