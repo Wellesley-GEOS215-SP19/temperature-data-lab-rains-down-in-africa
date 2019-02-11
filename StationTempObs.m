@@ -157,7 +157,7 @@ hold on;
 
 
 %% Add a legend, axis labels, and a title to your temperature anomaly plot
-legend({}, 'Location','northeast')
+legend({'Temperature Anomaly','5 Year Running Mean','Best Fit Line', 'Best Fit Line from 1960 to Present'}, 'Location','northwest')
 xlabel('Years')
 ylabel('Anomaly')
 title('Temperature Anomaly in South Africa from (1897-1991)')
