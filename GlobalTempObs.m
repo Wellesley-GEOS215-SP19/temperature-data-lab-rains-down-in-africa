@@ -6,7 +6,7 @@
 % your own line of code to accomplish the next task.
 
 %% Read in the file for your station as a data table
-filename = '684380.csv'; %change this to select a different station
+filename = 'gloabl_temp.xls'; %change this to select a different station
 stationdata = readtable(filename);
 
 %% Investigate the data you are working with
@@ -160,4 +160,4 @@ hold on;
 legend({'Temperature Anomaly','5 Year Running Mean','Best Fit Line', 'Best Fit Line from 1960 to Present'}, 'Location','northwest')
 xlabel('Years')
 ylabel('Anomaly')
-title('Temperature Anomaly in South Africa from 1897-1991')
+title('Global Temperature Anomaly from 1880-2006')
