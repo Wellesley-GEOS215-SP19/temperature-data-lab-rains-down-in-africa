@@ -29,6 +29,9 @@ stationlon = 24.77;
 year = stationdata.Year
 temp = stationdata.Jan
 plot(year,temp,'o')
+xlabel('Year')
+ylabel('Temperature (^{o}C)')
+title('Climatological Mean for January (Figure 1)')
 
 
 % Calculate the monthly mean, minimum, maximum, and standard deviation
@@ -64,9 +67,9 @@ year = stationdata.Year;
 
 
 errorbar(1:12, tempMean, tempStd)
-title('Monthly Climatology With Standard Deviation')
+title('Monthly Climatology With Standard Deviation (Figure 2)')
 xlabel('Months')
-ylabel('Temperature (C)')
+ylabel('Temperature (^{o}C)')
 
 %% Fill missing values with the monthly climatological value
 % Find all values of NaN in tempData and replace them with the
@@ -160,4 +163,4 @@ hold on;
 legend({'Temperature Anomaly','5 Year Running Mean','Best Fit Line', 'Best Fit Line from 1960 to Present'}, 'Location','northwest')
 xlabel('Years')
 ylabel('Anomaly')
-title('Temperature Anomaly in South Africa from 1897-1991')
+title('Temperature Anomaly in South Africa from 1897-1991 (Figure 3)')
