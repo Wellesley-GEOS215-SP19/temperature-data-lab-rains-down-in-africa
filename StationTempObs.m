@@ -31,7 +31,7 @@ temp = stationdata.Jan
 plot(year,temp,'o')
 xlabel('Year')
 ylabel('Temperature (^{o}C)')
-title('Climatological Mean for January (Figure 1)')
+title('Climatological Mean for January')
 
 
 % Calculate the monthly mean, minimum, maximum, and standard deviation
@@ -67,7 +67,7 @@ year = stationdata.Year;
 
 
 errorbar(1:12, tempMean, tempStd)
-title('Monthly Climatology With Standard Deviation (Figure 2)')
+title('Monthly Climatology With Standard Deviation')
 xlabel('Months')
 ylabel('Temperature (^{o}C)')
 
@@ -110,7 +110,10 @@ anomaly = amean - baseline
 figure(2); clf
 %Make a scatter plot with year on the x axis and the annual mean
 %temperature anomaly on the y axis
-scatter(year, anomaly)  
+scatter(year, anomaly) 
+title('Temperature Anomaly Over the Full Observational Period (1897-1991)')
+xlabel('Year')
+ylabel('Temperature Anomaly (^{o}C)')
 hold on;
 
 %% Smooth the data by taking a 5-year running mean of the data to plot
@@ -163,4 +166,4 @@ hold on;
 legend({'Temperature Anomaly','5 Year Running Mean','Best Fit Line', 'Best Fit Line from 1960 to Present'}, 'Location','northwest')
 xlabel('Years')
 ylabel('Anomaly')
-title('Temperature Anomaly in South Africa from 1897-1991 (Figure 3)')
+title('Temperature Anomaly in South Africa from 1897-1991')
