@@ -6,7 +6,7 @@
 % your own line of code to accomplish the next task.
 
 %% Read in the file for your station as a data table
-filename = 'gloabl_temp.xls'; %change this to select a different station
+filename = 'global_temp.xls'; %change this to select a different station
 stationdata = readtable(filename);
 
 
