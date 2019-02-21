@@ -21,7 +21,7 @@ temp = stationdata.Jan
 plot(year,temp,'o')
 xlabel('Year')
 ylabel('Temperature (^{o}C)')
-title('Global Climatological Mean for January (Figure 1)')
+title('Global Climatological Mean for January')
 
 % Calculate the monthly mean, minimum, maximum, and standard deviation
 % note: some of these values will come out as NaN is you use the regular
