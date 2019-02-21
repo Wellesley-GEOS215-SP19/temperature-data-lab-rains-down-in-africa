@@ -99,7 +99,10 @@ anomaly = amean - baseline
 figure(2); clf
 %Make a scatter plot with year on the x axis and the annual mean
 %temperature anomaly on the y axis
-scatter(year, anomaly)  
+scatter(year, anomaly)
+title('Annual Temperature Anomaly Over the Full Observational Period')
+xlabel('Year')
+ylabel('Temperature Anomaly (^{o}C)')
 hold on;
 
 %% Smooth the data by taking a 5-year running mean of the data to plot
